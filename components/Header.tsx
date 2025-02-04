@@ -14,31 +14,22 @@ const Header: React.FC = () => {
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
             <li>
-              <Link
+              <a
                 href="https://portfolio-tailwind-css-by-samad.vercel.app/"
                 target="_blank"
                 className="hover:text-gray-300"
               >
                 <User />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
+              <a
                 href="https://www.instagram.com/s_a_m_a_d11/"
                 target="_blank"
                 className="hover:text-gray-300"
               >
                 <Instagram />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="www.linkedin.com/in/muhammad-samad11"
-                target="_blank"
-                className="hover:text-gray-300"
-              >
-                <Linkedin />
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>
@@ -80,34 +71,24 @@ const Header: React.FC = () => {
         <nav className="md:hidden bg-gray-700">
           <ul className="flex flex-col space-y-2 px-4 py-2">
             <li>
-              <Link
+              <a
                 href="https://portfolio-tailwind-css-by-samad.vercel.app/"
                 target="_blank"
                 onClick={() => setMenuOpen(false)}
                 className="block hover:text-gray-300"
               >
                 <User />
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
+              <a
                 href="https://www.instagram.com/s_a_m_a_d11/"
                 target="_blank"
                 onClick={() => setMenuOpen(false)}
                 className="block hover:text-gray-300"
               >
                 <Instagram />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="www.linkedin.com/in/muhammad-samad11"
-                target="_blank"
-                onClick={() => setMenuOpen(false)}
-                className="block hover:text-gray-300"
-              >
-                <Linkedin />
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>
