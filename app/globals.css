@@ -2,20 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 1.5s ease-out forwards;
+}
+
+#container {
+  background-image: repeating-linear-gradient(
+      146deg,
+      rgba(236, 208, 211, 0.5) 0px,
+      rgba(236, 208, 211, 0.5) 30px,
+      transparent 30px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      56deg,
+      rgba(236, 208, 211, 0.5) 0px,
+      rgba(236, 208, 211, 0.5) 30px,
+      transparent 30px,
+      transparent 60px
+    ),
+    linear-gradient(146deg, rgb(72, 86, 66), rgb(72, 86, 66));
 }
