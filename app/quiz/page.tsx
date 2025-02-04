@@ -5,16 +5,20 @@ import { CheckCircleIcon, XCircleIcon, Lightbulb } from "lucide-react";
 
 const QuizPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [answers, setAnswers] = useState<string[]>(() => {
-    const savedAnswers = localStorage.getItem("quizAnswers");
-    return savedAnswers ? JSON.parse(savedAnswers) : new Array(30).fill("");
-  });
+  const [answers, setAnswers] = useState<string[]>(new Array(30).fill(""));
   const [showResults, setShowResults] = useState(false);
   const [shuffledMCQs, setShuffledMCQs] = useState(mcqs);
 
   const shuffleQuestions = (questions: typeof mcqs) => {
     return [...questions].sort(() => Math.random() - 0.5);
   };
+
+  useEffect(() => {
+    const savedAnswers = localStorage.getItem("quizAnswers");
+    if (savedAnswers) {
+      setAnswers(JSON.parse(savedAnswers));
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("quizAnswers", JSON.stringify(answers));
