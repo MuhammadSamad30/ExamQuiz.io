@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
-import { Instagram, Linkedin, User } from "lucide-react";
+import { Instagram, User } from "lucide-react";
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
