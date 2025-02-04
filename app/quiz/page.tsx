@@ -106,7 +106,7 @@ const QuizPage = () => {
         ) : (
           <>
             <h2 className="text-3xl font-bold text-center text-[#552525] mb-6">
-              Exam.io <br /> Your Ultimate Quiz and Assessment Platform
+              ExamQuiz.io <br /> Your Ultimate Quiz and Assessment Platform
               <hr />
             </h2>
             {currentMCQs.map((mcq, index) => (

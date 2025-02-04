@@ -10,7 +10,7 @@ const Home = () => {
     >
       <div className="flex flex-col justify-center items-center p-8 rounded-lg border-2 bg-[#632727c9]">
         <h1 className="text-6xl font-bold text-center text-[#42a8d4] animate__animated animate__fadeIn">
-          Exam.<span className="text-blue-600">io</span>
+          ExamQuiz.<span className="text-blue-600">io</span>
         </h1>
 
         <p className="text-lg text-[#ffffff] mt-2 animate__animated animate__fadeIn animate__delay-1s">
