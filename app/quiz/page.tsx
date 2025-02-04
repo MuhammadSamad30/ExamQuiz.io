@@ -53,7 +53,7 @@ const QuizPage = () => {
         <>
           <XCircleIcon className="text-red-500 w-12 h-12 mx-auto mb-4" />
           <p className="text-xl text-red-600 font-semibold">
-            You need more practice. Keep trying, you'll get better!
+            You need more practice. Keep trying, you&apos;ll get better!
           </p>
         </>
       );
@@ -71,7 +71,7 @@ const QuizPage = () => {
         <>
           <CheckCircleIcon className="text-green-500 w-12 h-12 mx-auto mb-4" />
           <p className="text-xl text-green-600 font-semibold">
-            Great job! You're doing well. Just a few more to master it.
+            Great job! You&apos;re doing well. Just a few more to master it.
           </p>
         </>
       );
@@ -80,7 +80,7 @@ const QuizPage = () => {
         <>
           <CheckCircleIcon className="text-blue-500 w-12 h-12 mx-auto mb-4" />
           <p className="text-xl text-blue-600 font-semibold">
-            Excellent! You're a quiz master. Keep it up!
+            Excellent! You&apos;re a quiz master. Keep it up!
           </p>
         </>
       );

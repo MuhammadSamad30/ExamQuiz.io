@@ -19,7 +19,7 @@ const Home: React.FC = () => {
 
         <p className="text-center text-[#75e6ba] mt-4 font-medium max-w-xl text-sm md:text-base animate__animated animate__fadeIn animate__delay-2s">
           Welcome to Exam.io, a platform to test your knowledge. Start your quiz
-          and challenge yourself with different levels of difficulty. Let's see
+          and challenge yourself with different levels of difficulty. Let&apos;s see
           how well you can do!
         </p>
 
