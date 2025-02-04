@@ -14,14 +14,18 @@ const QuizPage = () => {
   };
 
   useEffect(() => {
-    const savedAnswers = localStorage.getItem("quizAnswers");
-    if (savedAnswers) {
-      setAnswers(JSON.parse(savedAnswers));
+    if (typeof window !== "undefined") {
+      const savedAnswers = localStorage.getItem("quizAnswers");
+      if (savedAnswers) {
+        setAnswers(JSON.parse(savedAnswers));
+      }
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("quizAnswers", JSON.stringify(answers));
+    if (typeof window !== "undefined") {
+      localStorage.setItem("quizAnswers", JSON.stringify(answers));
+    }
   }, [answers]);
 
   const handleAnswerChange = (index: number, answer: string) => {
@@ -39,7 +43,9 @@ const QuizPage = () => {
     setAnswers(new Array(30).fill(""));
     setShowResults(false);
     setShuffledMCQs(shuffleQuestions(mcqs));
-    localStorage.removeItem("quizAnswers");
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("quizAnswers");
+    }
   };
 
   const currentMCQs = shuffledMCQs.slice(currentIndex, currentIndex + 30);
